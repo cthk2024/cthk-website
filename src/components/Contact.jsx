@@ -42,14 +42,14 @@ const Contact = () => {
       icon: Phone,
       title: '聯絡電話',
        details: [
-        'WHATSAPP：5951 9582'
+        <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WHATSAPP：5951 9582</a>
       ],
     },
     {
       icon: Mail,
       title: '電子郵箱',
       details: [
-        'info@cthk.hk'
+        <a href="mailto:info@cthk.hk" className="text-gray-600 hover:underline">info@cthk.hk</a>
       ],
     },
     {
@@ -244,7 +244,7 @@ const Contact = () => {
                 <CardContent>
                   <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.6060000000004!2d114.17478!3d22.29000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404009000000000%3A0x0!2sBeverley%20Commercial%20Centre!5e0!3m2!1sen!2shk!4v1678901234567!5m2!1sen!2shk"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.6060000000004!2d114.17478!3d22.29000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400eec4e515bf%3A0x455192591457cc6b!2s87-105%20Chatham%20Rd%20S%2C%20Tsim%20Sha%20Tsui%2C%20Hong%20Kong!5e0!3m2!1sen!2shk!4v1678901234567!5m2!1sen!2shk"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -302,4 +302,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

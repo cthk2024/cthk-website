@@ -6,48 +6,52 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import chinesePagoda from '../assets/images/chinese_pagoda.jpg';
 import chineseTemple from '../assets/images/chinese_temple.jpg';
 import greatWallSection from '../assets/images/great_wall_section.jpg';
+import groupTour1 from '../assets/images/group_tour_1.jpg';
+import groupTour2 from '../assets/images/group_tour_2.jpg';
+import groupTour4 from '../assets/images/group_tour_4.jpg';
 
 const Services = () => {
   const mainServices = [
     {
-      icon: MapPin,
-      title: '行程推介',
-      description: '精心策劃的旅遊路線，涵蓋中國各地的名勝古蹟和自然風光',
-      features: ['高端豪華旅遊', '文化深度遊', '自然風光遊', '美食體驗遊'],
-      image: greatWallSection,
-    },
-    {
       icon: Users,
       title: '自組包團',
-      description: '為工商客戶、社會團體、教育機構及私人安排獨立包團服務',
+      description: '為企業、學校、政府機構及私人團體度身訂造專屬行程，無論是商務考察、員工旅遊、團隊建設，還是文化交流，我們都能提供專業的策劃與執行。',
       features: ['度身訂造行程', '靈活出發日期', '專業導遊服務', '優質住宿安排'],
-      image: chinesePagoda,
+      image: groupTour1,
       highlight: '獨立包團熱線：5951 9582',
     },
     {
-      icon: Briefcase,
-      title: '會議旅遊',
-      description: '專業的商務旅遊服務，結合會議與休閒的完美體驗',
-      features: ['會議場地安排', '商務接待服務', '團隊建設活動', '企業獎勵旅遊'],
-      image: chineseTemple,
+      icon: GraduationCap,
+      title: '中國國內遊學團',
+      description: '結合教育與旅遊的深度體驗，為學生提供豐富的中國文化、歷史、地理及自然風光學習機會，培養國際視野和跨文化理解能力。',
+      features: ['課程設計', '名校參訪', '文化體驗', '安全保障'],
+      image: groupTour4,
+      highlight: '遊學團專線：5951 9582',
+    },
+    {
+      icon: MapPin,
+      title: '行程推介',
+      description: '精選中國各地特色旅遊路線，從壯麗山河到古城文化，帶您體驗不一樣的中國。',
+      features: ['高端豪華旅遊', '文化深度遊', '自然風光遊', '美食體驗遊'],
+      image: groupTour2,
     },
   ];
 
   const additionalServices = [
     {
-      icon: GraduationCap,
-      title: '遊學團',
-      description: '結合教育與旅遊的學習體驗',
+      icon: Briefcase,
+      title: '會議旅遊',
+      description: '專業的商務旅遊服務，結合會議與休閒的完美體驗。',
     },
     {
       icon: Ship,
       title: '郵輪旅遊',
-      description: '海外郵輪假期的接送安排',
+      description: '提供全球郵輪假期的接送安排及行程諮詢。',
     },
     {
       icon: Plane,
       title: '電子商務',
-      description: '線上旅遊服務平台',
+      description: '便捷的線上旅遊服務平台，隨時隨地預訂您的旅程。',
     },
   ];
 
@@ -284,11 +288,15 @@ const Services = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-              立即查詢
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100" asChild>
+              <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer">
+                立即查詢
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-              致電 28360078
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900" asChild>
+              <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer">
+                WHATSAPP 59519582
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -298,4 +306,7 @@ const Services = () => {
 };
 
 export default Services;
+
+
+
 

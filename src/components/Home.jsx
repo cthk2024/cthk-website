@@ -7,6 +7,7 @@ import greatWallHero from '../assets/images/great_wall_hero.jpg';
 import greatWallSection from '../assets/images/great_wall_section.jpg';
 import chinesePagoda from '../assets/images/chinese_pagoda.jpg';
 import chineseTemple from '../assets/images/chinese_temple.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const services = [
@@ -79,12 +80,16 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-              立即查詢
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold" asChild>
+              <Link to="/contact">
+                立即查詢
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-                  <Button size="lg" variant="outline" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white">
-              瀏覽行程
+            <Button size="lg" variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold" asChild>
+              <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer">
+                WHATSAPP 59519582
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -212,16 +217,20 @@ const Home = () => {
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-              立即查詢
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold" asChild>
+              <Link to="/contact">
+                立即查詢
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-              WHATSAPP 59519582
+            <Button size="lg" variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold" asChild>
+              <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer">
+                WHATSAPP 59519582
+              </a>
             </Button>
           </motion.div>
         </div>

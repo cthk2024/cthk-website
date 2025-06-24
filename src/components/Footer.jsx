@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logo from '../assets/images/logo.png'; // Import the actual logo
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-red-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">中</span>
-              </div>
+              <img src={logo} alt="中國遊蹤" className="h-10" /> {/* Use the actual logo */}
               <div>
                 <h3 className="text-lg font-bold">中國遊蹤有限公司</h3>
                 <p className="text-sm text-gray-400">China Tourist (Hong Kong) Limited</p>
@@ -78,17 +77,19 @@ const Footer = () => {
                   <p>87-105 Chatham Road South, Tsim Sha Tsui, Kowloon</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                <div className="text-gray-400 text-sm">
-                  <p>WHATSAPP：5951 9582</p>
-                </div>
-              </div>
-              
+                     <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                  <div className="text-gray-400 text-sm">
+                    <a href="https://wa.me/85259519582" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                      WHATSAPP：5951 9582
+                    </a>
+                  </div>
+                </div>             
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                <p className="text-gray-400 text-sm">info@cthk.hk</p>
+                <p className="text-gray-400 text-sm">
+                  <a href="mailto:info@cthk.hk" className="text-gray-400 hover:text-white">info@cthk.hk</a>
+                </p>
               </div>
               
               <div className="flex items-center space-x-3">
@@ -123,4 +124,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
