@@ -8,8 +8,8 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: '產品積量',
-      description: '堅持以產品積量、誠信立業經營原則',
+      title: '產品質量',
+      description: '堅持以產品質量、誠信立業經營原則',
     },
     {
       icon: Heart,
